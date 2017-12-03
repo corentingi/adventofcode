@@ -12,9 +12,9 @@ sample = """
 expected_result = 18
 
 
-class TestSumCaptcha(unittest.TestCase):
+class TestScript(unittest.TestCase):
 
-    def test_sum_captcha(self):
+    def test_checksum(self):
         result = checksum(sample)
         self.assertEqual(result, expected_result)
 

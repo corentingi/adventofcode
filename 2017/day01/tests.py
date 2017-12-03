@@ -12,7 +12,7 @@ cases = [
 ]
 
 
-class TestSumCaptcha(unittest.TestCase):
+class TestScript(unittest.TestCase):
 
     def test_sum_captcha(self):
         for input_value, expected in cases:
