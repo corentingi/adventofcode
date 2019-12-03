@@ -6,29 +6,28 @@ import math
 import re
 
 
-
-def fuel_required(mass):
+def _fuel_required(mass):
     return math.floor(int(mass) / 3.) - 2
 
 
-def total_fuel_required(mass):
-    fuel = fuel_required(mass)
+def _total_fuel_required(mass):
+    fuel = _fuel_required(mass)
 
     if fuel > 0:
-        return fuel + total_fuel_required(fuel)
+        return fuel + _total_fuel_required(fuel)
     else:
         return 0
 
 
 def module_mass_part1(input_data):
     lines = re.split('\n', input_data.strip())
-    masses = [fuel_required(line) for line in lines]
+    masses = [_fuel_required(line) for line in lines]
     return sum(masses)
 
 
 def module_mass_part2(input_data):
     lines = re.split('\n', input_data.strip())
-    masses = [total_fuel_required(line) for line in lines]
+    masses = [_total_fuel_required(line) for line in lines]
     return sum(masses)
 
 
