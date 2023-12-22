@@ -9,5 +9,14 @@
             "cwd": "${workspaceFolder}",
             "justMyCode": false
         },
+        {
+            "name": "Run script (debug)",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "args": ["-v"],
+            "cwd": "${workspaceFolder}",
+            "justMyCode": false
+        },
     ]
 }
